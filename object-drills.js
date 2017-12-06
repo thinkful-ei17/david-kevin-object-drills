@@ -105,3 +105,45 @@ What gets printed out for the owner?
 Adjust the message so that people with no boss display "${title} ${name} doesn't report to anybody." - for example, Founder John doesn't report to anybody.
 */
 
+const company = [
+  {
+    name: 'David',
+    jobTitle: 'Thinkful student',
+    boss: 'LucyBoss'
+  },
+  {
+    name: 'Kevin',
+    jobTitle: 'Thinkful student',
+    boss: 'BillBoss'
+
+  },
+  {
+    name: 'Luke',
+    jobTitle: 'Jedi',
+    boss: 'TedBoss'
+  },
+  {
+    name: 'Fred',
+    jobTitle: 'Founder'
+  }
+];
+for(let i=0; i < company.length; i++) {
+  const employee = company[i];
+  if (!employee.boss){
+    console.log(`${employee.jobTitle} ${employee.name} doesn't report to anyone`);
+  } else {
+    console.log (`${employee.jobTitle} ${employee.name} reports to ${employee.boss}`);
+  }
+}
+
+//   console.log(`${jobTitle} ${name} ${employee.boss === true ? 'reports to ${employee.boss}'} ${boss} ${employee.boss} : ${jobTitle} ${name} doesn't report to anyone.`)
+// }
+
+//Reference from yesterday ? : method --
+// console.log(The ${typeOfWarning} has triggered ${warningCounter} ${warningCounter === 1 ? 'time' : 'times'}.);
+
+/*
+6. Cracking the code
+
+Redo your Cracking the Code problem from String Drills but this time use an object as your cipher. Additionally, instead of having the function accept a single word, have the function accept a single string of words, and then return the fully decoded message.
+*/
