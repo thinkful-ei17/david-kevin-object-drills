@@ -60,3 +60,10 @@ Create an object with a property called meals which is an array of strings: 'bre
 Use console.log to show the name of a hobbit's fourth meal of the day.
 Don't forget that humans and hobbits count from 1, but computers count from 0.
 */
+
+const mealObject = {
+  meals: [
+    'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'
+  ],
+}
+console.log(`hobbit's 4th meal of the day is ${mealObject.meals[3]}`)
