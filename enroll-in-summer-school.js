@@ -31,7 +31,7 @@ enrollInSummerSchool should return an array of objects. For each object from the
   },
 ];
 */
-
+'use strict'
 const studentData = [
   {
     name: 'Tim',
@@ -53,13 +53,15 @@ const studentData = [
 //you can do this method using a map or use a for loop.
 function enrollInSummerSchool(students) {
   return students.map(student => {
-    return {
-      name: student.name,
-      status: 'In Summer school',
-      course: student.course,
-    };
+    return {...student, status: 'In Summer School'}
   });
 }
+
+// //using forEach
+// function enrollInSummerSchool(students) {
+// 	students.forEach(student => student.status = 'In Summer School');
+// 	return students;
+//   }
 
 // tests
 
