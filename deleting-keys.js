@@ -5,7 +5,9 @@ Modify the keyDeleter function so that it deletes keys for foo and bar for any o
 */
 
 function keyDeleter(obj) {
-  // your code here
+  delete obj.foo;
+  delete obj.bar;
+  return obj;
 }
 
 var sampleObj = {
