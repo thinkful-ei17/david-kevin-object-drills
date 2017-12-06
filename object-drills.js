@@ -67,3 +67,41 @@ const mealObject = {
   ],
 }
 console.log(`hobbit's 4th meal of the day is ${mealObject.meals[3]}`)
+
+
+/*
+4. Arrays of objects
+
+Create 3-5 objects, each with a name and a jobTitle. Use people you know, or characters from fiction, or your own inventions.
+Store these objects in an array.
+Iterate over the array and use console.log to show each person's job title and name.
+*/
+
+const objArray = [
+  {
+    name: 'David',
+    jobTitle: 'Thinkful student'
+  },
+  {
+    name: 'Kevin',
+    jobTitle: 'Also Thinkful student'
+  },
+  {
+    name: 'Luke',
+    jobTitle: 'Jedi'
+  }
+];
+for(let i=0;i<objArray.length;i++) {
+  const employee = objArray[i];
+  console.log(`name: ${employee.name}, jobTitle: ${employee.jobTitle}`)
+}
+
+/*
+5. Properties that aren't there
+
+Expand on the previous example by adding a boss property to everyone except the owner of the company.
+Change the iteration to print out messages in this format: "${title} ${name} reports to ${boss}.". For example: Junior Engineer Bob reports to Fred..
+What gets printed out for the owner?
+Adjust the message so that people with no boss display "${title} ${name} doesn't report to anybody." - for example, Founder John doesn't report to anybody.
+*/
+
