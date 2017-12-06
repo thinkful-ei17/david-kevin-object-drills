@@ -164,6 +164,7 @@ Use your function to decode the following message: 'craft block argon meter bell
 
 function decode(words) {
   const cipher = {
+    //these are the indexes we want.
     a: 2,
     b: 3,
     c: 4,
@@ -172,11 +173,15 @@ function decode(words) {
   const wordsSplit = words.split(' ');
   const result = [];
   for(let i=0;i<wordsSplit.length;i++) {
-    if(wordsSplit[i].charAt(0) in cipher) {
-      result.push(wordsSplit[i].charAt(cipher));
+    let firstLetter = wordsSplit[i].charAt(0);
+    if(firstLetter in cipher) {
+      //have a variable to find and get the letter you want.
+      //the other way is to change the object on line 166. increment all by -1.
+      result.push(wordsSplit[i].charAt(cipher[firstLetter]-1));
+    } else {
+      result.push(' ');
     }
   }
-  console.log(result);
-  return result.join(' ');
+  return result.join('');
 }
-decode('craft block argon meter bells brown croon droop');
+console.log(decode('craft block argon meter bells brown croon droop'));
