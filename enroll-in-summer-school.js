@@ -50,8 +50,15 @@ const studentData = [
   },
 ];
 
+//you can do this method using a map or use a for loop.
 function enrollInSummerSchool(students) {
-  // your code here
+  return students.map(student => {
+    return {
+      name: student.name,
+      status: 'In Summer school',
+      course: student.course,
+    };
+  });
 }
 
 // tests

@@ -6,9 +6,8 @@ makeStudentReport should return an array of strings. For each item in data, retu
 */
 
 function makeStudentsReport(data) {
-  // your code here
+ return data.map(d => `${d.name}: ${d.grade}`);
 }
-
 
 // tests
 
