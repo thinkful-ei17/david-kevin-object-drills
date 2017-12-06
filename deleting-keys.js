@@ -1,4 +1,6 @@
 /*
+Deleting keys:
+
 Modify the keyDeleter function so that it deletes keys for foo and bar for any object passed in and then returns the modified object.
 */
 

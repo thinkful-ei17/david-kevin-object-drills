@@ -1,4 +1,6 @@
 /*
+Object updater:
+
 Modify the updateObject function (which takes a single argument (obj)) so that it adds the following key/value pairs to obj and returns it:
 
 foo => 'foo'
