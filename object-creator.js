@@ -9,12 +9,14 @@ sayHello => a function that returns the string 'hello'
 */
 
 function createMyObject() {
-foo: 'bar',
-answerToUniverse: 42,
-'olly olly': 'oxen free',
-sayHello: function(){
-  return 'hello';
-}
+  return {
+    foo: 'bar',
+    answerToUniverse: 42,
+    'olly olly': 'oxen free',
+    sayHello: function(){
+      return 'hello';
+    }
+  };
 }
 
 /*
