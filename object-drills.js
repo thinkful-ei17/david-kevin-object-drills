@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 /*
 Object drills
 
@@ -11,26 +11,26 @@ Fill in the body of the method to return the hydration of the loaf (the water di
 Call the hydration method and use console.log to print the result.
 */
 
- const loaf = {
-   flour: 300,
-   water: 210,
- }
- console.log(`Flour: ${loaf.flour}, Water: ${loaf.water}`);
+const loaf = {
+  flour: 300,
+  water: 210,
+};
+console.log(`Flour: ${loaf.flour}, Water: ${loaf.water}`);
 
- const loaf2 = {
-   flour: 300,
-   water: 210,
-   hydration: function() {}
- }
+const loaf2 = {
+  flour: 300,
+  water: 210,
+  hydration: function() {}
+};
 
- const loaf3 = {
-   flour: 300,
-   water: 210,
-   hydration: function() {
-     return (this.water/this.flour)*100;
-   }
- };
- console.log("Hydration:", loaf3.hydration());
+const loaf3 = {
+  flour: 300,
+  water: 210,
+  hydration: function() {
+    return (this.water/this.flour)*100;
+  }
+};
+console.log('Hydration:', loaf3.hydration());
 
 
 /*
@@ -47,7 +47,7 @@ const obj = {
   fum: 100,
   quux: 400,
   spam: 'spam'
-}
+};
 
 for(let key in obj) {
   console.log(`key: ${key}, value: ${obj[key]}`);
@@ -65,8 +65,8 @@ const mealObject = {
   meals: [
     'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'
   ],
-}
-console.log(`hobbit's 4th meal of the day is ${mealObject.meals[3]}`)
+};
+console.log(`hobbit's 4th meal of the day is ${mealObject.meals[3]}`);
 
 
 /*
@@ -93,7 +93,7 @@ const objArray = [
 ];
 for(let i=0;i<objArray.length;i++) {
   const employee = objArray[i];
-  console.log(`name: ${employee.name}, jobTitle: ${employee.jobTitle}`)
+  console.log(`name: ${employee.name}, jobTitle: ${employee.jobTitle}`);
 }
 
 /*
@@ -146,4 +146,37 @@ for(let i=0; i < company.length; i++) {
 6. Cracking the code
 
 Redo your Cracking the Code problem from String Drills but this time use an object as your cipher. Additionally, instead of having the function accept a single word, have the function accept a single string of words, and then return the fully decoded message.
+A code has been invented which replaces each character in a sentence with a five letter word. The first letter of each encoded word determines which of the remaining four characters contains the decoded character according to this table:
+
+First letter	Character number
+a	2
+b	3
+c	4
+d	5
+So for example, the encoded word 'cycle' would be decoded to the character 'l'. This is because the first letter is a 'c', so you look for the fourth character, which is 'l'.
+
+If the first letter of the encoded word isn't 'a', 'b', 'c', or 'd' (for example 'mouse') this should be decoded to a space.
+
+Write a function called decode which takes an encoded word as an argument, and returns the correct decoded character.
+
+Use your function to decode the following message: 'craft block argon meter bells brown croon droop'.
 */
+
+function decode(words) {
+  const cipher = {
+    a: 2,
+    b: 3,
+    c: 4,
+    d: 5
+  };
+  const wordsSplit = words.split(' ');
+  const result = [];
+  for(let i=0;i<wordsSplit.length;i++) {
+    if(wordsSplit[i].charAt(0) in cipher) {
+      result.push(wordsSplit[i].charAt(cipher));
+    }
+  }
+  console.log(result);
+  return result.join(' ');
+}
+decode('craft block argon meter bells brown croon droop');
