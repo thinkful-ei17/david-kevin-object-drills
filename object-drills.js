@@ -1,3 +1,4 @@
+'use strict'
 /*
 Object drills
 
@@ -38,4 +39,24 @@ Call the hydration method and use console.log to print the result.
 Create an object with five properties: foo, bar, fum, quux, and spam. Give each property a unique value of your choosing.
 Loop over the object using for ... in
 Use console.log to show each property name and its associated value.
+*/
+
+const obj = {
+  foo: 'foo',
+  bar: 'bar',
+  fum: 100,
+  quux: 400,
+  spam: 'spam'
+}
+
+for(let key in obj) {
+  console.log(`key: ${key}, value: ${obj[key]}`);
+}
+
+/*
+3. Arrays in objects
+
+Create an object with a property called meals which is an array of strings: 'breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper'.
+Use console.log to show the name of a hobbit's fourth meal of the day.
+Don't forget that humans and hobbits count from 1, but computers count from 0.
 */
